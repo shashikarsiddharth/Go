@@ -3,4 +3,5 @@ Repo for storing the journey of learning Go programming language from starch.
 
 ## Index
 - [Go Backstory](./backstory.md)
-- [How to be success](./how-to-be-successful.md)
+- [How to be successful](./how-to-be-successful.md)
+- [Go Resource](./go-resources.md)
