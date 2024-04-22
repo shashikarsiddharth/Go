@@ -3,7 +3,7 @@ Go was created by Ken Thompson (creator of B, C, Unix and UTF-8), along with Rob
 
 ### Why creating a new lanugage?
 Few of the main reason for creating Go was 
-- These engineers wanted to create something that has efficient complication, efficient execution and has ease of programming.
+- These engineers wanted to create something that has efficient compilation, efficient execution and has ease of programming.
 - To know more about the rational and the entire back story, please read the Golang FAQ section. https://docs.studygolang.com/doc/faq#creating_a_new_language
 
 ### Why learn Go?
@@ -33,8 +33,8 @@ Few of the main reason for creating Go was
 - Garbage collected.
 - Powerful standard library.
 - Great for building system level applications.
-- Procedural
-- Imperitive
-- Modular
-- Object-Oriented
-- Statically-typed
+- Procedural.
+- Imperitive.
+- Modular.
+- Object-Oriented.
+- Statically-typed.
