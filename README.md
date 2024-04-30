@@ -7,3 +7,4 @@ Repo for storing the journey of learning Go programming language from starch.
 - [Go Resources](./resources/go-resources.md)
 - [Todd Mcleod exercises](./todd-mcleod-exercises/)
 - [Gophercises](./gophercises/)
+- [100 Golang Exercies](./100-golang-exercises/)

@@ -1,24 +1,36 @@
 package main
 
-import 
-(
+import (
 	"fmt"
-	// "strconv"
+	"strconv"
+	"strings"
 )
 
 func factorial(num int) int {
-	return 0
+	if num == 0 || num == 1 {
+		return 1
+	}
+	return num * factorial(num-1)
 }
 
-func main(){
-	var input string
-	inp := []int{}
-	fmt.Scanf("%s", &input)
-	for i := range(input){
-		fmt.Println(i)
-		// append(inp, strconv.Atoi(input[i]))
+func parseInput(input string) []int {
+	inp := strings.Split(input, ",")
+	var i []int
+	for _, s := range inp {
+		n, _ := strconv.Atoi(s)
+		i = append(i, n)
 	}
+	return i
+}
 
-	fmt.Println(inp)
-	fmt.Println(factorial(1))
+func main() {
+	var input string
+	fmt.Scan(&input)
+
+	var res []string
+	for _, i := range parseInput(input) {
+		op := strconv.Itoa(factorial(i))
+		res = append(res, op)
+	}
+	fmt.Println(strings.Join(res, ","))
 }
