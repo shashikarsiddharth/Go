@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strings"
+)
 
 type MyIO struct{}
 
@@ -16,7 +19,7 @@ func (io MyIO) ReadString() string {
 }
 
 func (io MyIO) PrintString(input string) {
-	fmt.Println(input)
+	fmt.Println(strings.ToUpper(input))
 }
 
 func main() {
