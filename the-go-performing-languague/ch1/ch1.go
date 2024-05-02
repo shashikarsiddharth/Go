@@ -3,7 +3,9 @@ package main
 import (
 	"bufio"
 	"fmt"
+	"io"
 	"log"
+	"net/http"
 	"os"
 	"strings"
 )
@@ -42,13 +44,23 @@ func printDuplicate() {
 	fmt.Println(count)
 }
 
-// Purpose: To find duplicates from a file using file handling
-func findDuplicateV2(){
-	var count = make(map[string]int)
-		
+// Purpose: To fetch data from an endpoint
+func fetchData(endpoint string) {
+	resp, err := http.Get(endpoint)
+	if err != nil {
+		log.Panicf("failed to get response from endpoint: %v", err)
+	}
+
+	r, err := io.ReadAll(resp.Body)
+	if err != nil {
+		log.Panicf("failed to read response: %v", err)
+	}
+	resp.Body.Close()
+	fmt.Printf("%s", r)
 }
 
 func main() {
 	// fmt.Println(charCounter("HelloWorld"))
-	printDuplicate()
+	// printDuplicate()
+	// fetchData("https://example.com/")
 }
