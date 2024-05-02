@@ -59,8 +59,19 @@ func fetchData(endpoint string) {
 	fmt.Printf("%s", r)
 }
 
+// Purpose: To start a simple http server on port 8080
+func startServer() {
+
+	helloHandler := func(w http.ResponseWriter, req *http.Request) {
+		io.WriteString(w, "Hello, World\n")
+	}
+
+	http.HandleFunc("/", helloHandler)
+	log.Fatal(http.ListenAndServe("localhost:8080", nil))
+}
 func main() {
 	// fmt.Println(charCounter("HelloWorld"))
 	// printDuplicate()
 	// fetchData("https://example.com/")
+	startServer()
 }
